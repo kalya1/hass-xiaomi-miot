@@ -1,0 +1,202 @@
+{
+    "config": {
+        "flow_title": "Xiaomi Miot Auto",
+        "step": {
+            "user": {
+                "title": "Selectați Acțiune",
+                "data": {
+                    "action": "Acțiune"
+                }
+            },
+            "token": {
+                "description": "Configurare informații dispozitiv.",
+                "data": {
+                    "host": "IP Local",
+                    "token": "Token",
+                    "name": "Nume Dispozitiv",
+                    "scan_interval": "Interval (secunde)"
+                }
+            },
+            "cloud": {
+                "description": "Configurare cont Xiaomi Cloud.\n{tip}",
+                "data": {
+                    "username": "ID Cont Xiaomi / Email",
+                    "password": "Parolă",
+                    "captcha": "Captcha",
+                    "server_country": "Locația serverului MiCloud",
+                    "conn_mode": "Modul de conectare a dispozitivului",
+                    "filter_models": "Filtrează dispozitive după model/familie/WiFi (Avansat)"
+                }
+            },
+            "cloud_filter": {
+                "title": "Filtru dispozitive cloud",
+                "description": "Puteți include sau exclude dispozitive pentru a integra doar dispozitivele preferate. În modul de excludere, dacă nu se selectează nicio opțiune, toate opțiunile sunt considerate incluse.\n{tip}",
+                "data": {
+                    "filter_model": "Filtru Model Dispozitiv",
+                    "model_list": "Listă Modele Dispozitive",
+                    "filter_home_id": "Filtrează după casă",
+                    "home_id_list": "Listă Case",
+                    "filter_ssid": "Filtru SSID WiFi",
+                    "ssid_list": "Listă SSID WiFi",
+                    "filter_bssid": "Filtru BSSID WiFi",
+                    "bssid_list": "Listă BSSID WiFi",
+                    "filter_did": "Filtru Dispozitiv",
+                    "did_list": "Listă Dispozitive"
+                }
+            },
+            "customizing": {
+                "title": "Personalizare entități / dispozitive",
+                "description": "{tip}",
+                "data": {
+                    "domain": "Selectați domeniul entității",
+                    "entity": "Selectați entitatea",
+                    "model": "Selectați modelul dispozitivului",
+                    "model_specified": "Model dispozitiv specificat (opțional)",
+                    "only_main_entity": "Doar entitățile principale (părinte)",
+                    "reset_customizes": "Resetează opțiunile implicite",
+                    "bool2selects": "Personalizează opțiuni"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Conectarea la dispozitiv a eșuat",
+            "cannot_login": "Autentificarea contului Xiaomi Cloud a eșuat, vă rugăm să verificați dacă parola este corectă. Dacă autentificarea continuă să eșueze, autentificați-vă pe mi.com în același mediu de rețea și încercați din nou.",
+            "cannot_reach": "Nu se poate accesa API-ul Xiaomi",
+            "tzinfo_error": "Consultați: https://github.com/al-one/hass-xiaomi-miot/issues/260",
+            "none_devices": "Niciun dispozitiv în contul Xiaomi Cloud"
+        },
+        "abort": {
+            "config_saved": "Configurație salvată! [Personalizează din nou](/_my_redirect/config_flow_start?domain=xiaomi_miot).\n{tip}\n\nUnele opțiuni de personalizare necesită [reîncărcarea integrării](/developer-tools/yaml) pentru a avea efect.",
+            "already_configured": "Dispozitivul este deja configurat",
+            "not_xiaomi_miio": "Nu este un dispozitiv Xiaomi miio/miot."
+        }
+    },
+    "options": {
+        "step": {
+            "user": {
+                "title": "Xiaomi Miot",
+                "description": "Configurare informații dispozitiv.",
+                "data": {
+                    "host": "IP Local",
+                    "token": "Token",
+                    "scan_interval": "Interval actualizare stare (secunde)",
+                    "miot_cloud": "Activează Miot Cloud (Configurați contul în YAML)"
+                }
+            },
+            "cloud": {
+                "description": "Configurare cont Xiaomi Cloud.\n{tip}",
+                "data": {
+                    "username": "ID Cont Xiaomi / Email",
+                    "password": "Parolă",
+                    "captcha": "Captcha",
+                    "server_country": "Locația serverului MiCloud",
+                    "conn_mode": "Modul de conectare a dispozitivului",
+                    "renew_devices": "Forțează reînnoirea dispozitivelor",
+                    "disable_message": "Dezactivează senzorul de notificare MiHome",
+                    "disable_scene_history": "Dezactivează senzorul de istoric scene MiHome"
+                }
+            },
+            "cloud_filter": {
+                "title": "Filtru dispozitive cloud",
+                "description": "Puteți include sau exclude dispozitive pentru a integra doar dispozitivele preferate. În modul de excludere, dacă nu se selectează nicio opțiune, toate opțiunile sunt considerate incluse.\n{tip}",
+                "data": {
+                    "filter_model": "Filtru Model Dispozitiv",
+                    "model_list": "Listă Modele Dispozitive",
+                    "filter_home_id": "Filtrează după casă",
+                    "home_id_list": "Listă Case",
+                    "filter_ssid": "Filtru SSID WiFi",
+                    "ssid_list": "Listă SSID WiFi",
+                    "filter_bssid": "Filtru BSSID WiFi",
+                    "bssid_list": "Listă BSSID WiFi",
+                    "filter_did": "Filtru Dispozitiv",
+                    "did_list": "Listă Dispozitive"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Conectarea la dispozitiv a eșuat",
+            "cannot_login": "Autentificarea contului Xiaomi Cloud a eșuat, vă rugăm să verificați dacă parola este corectă. Dacă autentificarea continuă să eșueze, autentificați-vă pe mi.com în același mediu de rețea și încercați din nou.",
+            "cannot_reach": "Nu se poate accesa API-ul Xiaomi",
+            "tzinfo_error": "Consultați: https://github.com/al-one/hass-xiaomi-miot/issues/260",
+            "none_devices": "Niciun dispozitiv în contul Xiaomi Cloud"
+        },
+        "abort": {
+            "show_customizes": "[![Adaugă integrare nouă](https://my.home-assistant.io/badges/config_flow_start.svg)](/_my_redirect/config_flow_start?domain=xiaomi_miot)\n[Adaugă integrare nouă](/_my_redirect/config_flow_start?domain=xiaomi_miot) pentru a modifica personalizarea.\n{tip}"
+        }
+    },
+    "system_health": {
+        "info": {
+            "component_version": "Versiune Componentă",
+            "can_reach_server": "Acces la Serverul Xiaomi API",
+            "can_reach_spec": "Acces la Serverul MIoT-Spec",
+            "logged_accounts": "Conturi Conectate",
+            "total_devices": "Dispozitive MiHome Totale"
+        }
+    },
+    "entity": {
+        "sensor": {
+            "lock": {
+                "state": {
+                    "bluetooth": "Bluetooth",
+                    "password": "Parolă",
+                    "biological": "Biometric",
+                    "key": "Cheie",
+                    "turntable": "Buton rotativ",
+                    "nfc": "NFC",
+                    "one_time_password": "Parolă unică",
+                    "two_step_verification": "Verificare în doi pași",
+                    "coercion": "Coerciție",
+                    "homekit": "HomeKit",
+                    "manual": "Manual",
+                    "automatic": "Automată"
+                }
+            },
+            "lock_action": {
+                "state": {
+                    "outside_unlock": "Deblocare din exterior",
+                    "lock": "Blochează",
+                    "anti_lock_on": "Activare anti-blocare",
+                    "anti_lock_off": "Dezactivare anti-blocare",
+                    "inside_unlock": "Deblocare din interior",
+                    "lock_inside": "Blocare din interior",
+                    "child_lock_on": "Activare blocare pentru copii",
+                    "child_lock_off": "Dezactivare blocare pentru copii",
+                    "lock_outside": "Blocare din exterior"
+                }
+            },
+            "door_state": {
+                "state": {
+                    "open": "Deschisă",
+                    "close": "Închisă",
+                    "close_timeout": "Închidere timeout",
+                    "knock": "Bătut",
+                    "breaking": "Tentativă de spargere",
+                    "stuck": "Blocat"
+                }
+            }
+        },
+        "climate": {
+            "air_conditioner": {
+                "state_attributes": {
+                    "fan_mode": {
+                        "state": {
+                            "auto": "Auto",
+                            "low": "Scăzut",
+                            "medium": "Mediu",
+                            "high": "Ridicat",
+                            "wind_direction": "Direcția vântului"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "device_automation": {
+        "trigger_subtype": {
+            "click": "Apăsare",
+            "double_click": "Dublu Apăsare",
+            "long_press": "Apăsare lungă",
+            "shake": "Scuturare"
+        }
+    }
+}
